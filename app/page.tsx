@@ -28,7 +28,8 @@ export default function Page() {
                   </h4>
                   <EmailButton/>
               </div>
-          </main
+          </main>
+          <div className="hr"/>
           <footer>
               {SOCIAL_LINKS.map((link, index) => (
                   <Link className='icon' key={index} href={link.url} target="_blank" rel="noreferrer">

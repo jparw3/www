@@ -1,0 +1,97 @@
+@import "global";
+
+body {
+  background-color: #F5F5F5;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.bio {
+  display: flex;
+  padding: 48px;
+  align-items: flex-start;
+  gap: 16px;
+
+  @include mobile {
+    padding: 32px 20px;
+    flex-direction: column;
+  }
+
+  &__left {
+    img{
+      width: 40px;
+
+      border-radius: 8px;
+
+      filter: saturate(0);
+
+      box-shadow: 0 2px 16px -4px rgba(0, 0, 0, 0.25);
+
+      transition: 200ms ease-in-out;
+
+      @include mobile {
+        width: 60px;
+        height: 60px;
+      }
+
+      &:hover {
+        filter: none;
+        transform: scale(102%);
+      }
+    }
+  }
+
+  &__right {
+    max-width: 432px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+
+    @include mobile{
+        max-width: 100%;
+    }
+
+    h4 {
+      color: #4D4D4D;
+    }
+
+    .darken {
+      color: #1A1A1A;
+    }
+  }
+}
+
+.hr {
+  height: 1px;
+  background-image: linear-gradient(to right, #E6E6E6 66%, rgba(255, 255, 255, 0) 0%);
+  background-position: bottom;
+  background-size: 12px 1px;
+  background-repeat: repeat-x;
+}
+
+footer{
+  margin-top: auto;
+  display: flex;
+  padding: 24px 48px;
+  align-items: flex-start;
+  gap: 16px;
+
+  @include mobile{
+    justify-content: center;
+    gap: 48px;
+  }
+}
+
+.icon svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
+  @include mobile{
+    width: 24px;
+    height: 24px;
+  }
+}

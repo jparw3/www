@@ -1,0 +1,80 @@
+@mixin mobile {
+  @media (max-width: 599px) { @content; }
+}
+
+@font-face {
+  font-family: InterVariable;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/app/fonts/InterVariable.ttf") format("ttf");
+}
+@font-face {
+  font-family: InterVariable;
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/app/fonts/InterVariable-Italic.ttf") format("ttf");
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.italic {
+  font-style: italic;
+}
+
+h1 {
+  font-family: InterVariable, sans-serif;
+  font-weight: 450;
+
+  font-size: 40px;
+  line-height: 48px;
+
+  color: #1A1A1A;
+
+  @include mobile {
+    font-weight: 500;
+
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+h4 {
+  font-family: InterVariable, sans-serif;
+  font-weight: 400;
+
+  font-size: 16px;
+  line-height: 22px;
+}
+
+h5 {
+  font-family: InterVariable, sans-serif;
+  font-weight: 400;
+
+  font-size: 14px;
+  line-height: 18px;
+
+  @include mobile {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+.side-4px {
+  padding: 0 4px;
+}
+
+.inline-link {
+  color: #1A1A1A;
+  text-decoration: underline;
+}
+
+.desktop-only {
+  @include mobile {
+    display: none;
+  }
+}

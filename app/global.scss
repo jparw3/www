@@ -2,6 +2,14 @@
   @media (max-width: 599px) { @content; }
 }
 
+@mixin hover-supported {
+  @media (hover: hover), (-ms-high-contrast: none) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
 @font-face {
   font-family: InterVariable;
   font-style: normal;

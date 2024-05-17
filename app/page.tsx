@@ -14,7 +14,7 @@ export default function Page() {
               </div>
               <div className="bio__right">
                   <h4>
-                      Hi, my names <span className="darken">Jack</span>.
+                      Hi, my name&apos;s <span className="darken">Jack</span>.
                       <br/>
                       I craft <span className="darken">digital experiences</span>, front to back.                      <br/>
                       <br/>

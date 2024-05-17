@@ -3,7 +3,6 @@
 import {useState} from "react";
 import "./email-button.scss";
 import Confetti from "react-dom-confetti";
-import {track} from "@vercel/analytics";
 
 export default function EmailButton() {
     const [copied, setCopied] = useState<boolean>(false);
@@ -12,7 +11,6 @@ export default function EmailButton() {
         if (!copied) {
             navigator.clipboard.writeText("jparw33@gmail.com").then(() => {
                 setCopied(true);
-                track("email-copied");
                 setTimeout(() => {
                     setCopied(false);
                 }, 2000);

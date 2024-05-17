@@ -10,6 +10,10 @@ $transition: 300ms ease-in-out;
   align-items: center;
   gap: 8px;
 
+  user-select: none;
+  -moz-user-select: none;
+    -webkit-user-select: none;
+
   @include mobile {
     width: 100%;
     padding: 24px;

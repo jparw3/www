@@ -5,14 +5,14 @@ import {INDEX_OG_PATH} from "@/app/lib/constants";
 import {Analytics} from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jxck.bio"),
+  metadataBase: new URL("https://jack.willa.rs"),
   title: {
     template: "%s - Jack Willars",
     default: "Jack Willars — Software Developer",
   },
   description: "Crafting digital experiences with code.",
   openGraph: {
-    url: "https://jxck.bio",
+    url: "https://jack.willa.rs",
     images: [INDEX_OG_PATH]
   },
   twitter: {
